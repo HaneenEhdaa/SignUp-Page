@@ -32,4 +32,4 @@ Title: Create signup page to access the shopping screen
 - Each product has an **Add to Cart** button that shows a snack bar message: "Your item added to the cart✨".
 
 ## Demo
-https://github.com/user-attachments/assets/f56ae0a5-f5c4-46d1-8330-68dc9b931d18
+https://github.com/user-attachments/assets/5033c129-a85d-4c4f-9eaa-e4baad8e9bc3
