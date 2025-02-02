@@ -1,3 +1,4 @@
+import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'package:shopping_app/views/products_page.dart';
 
@@ -10,6 +11,7 @@ class SignUp extends StatefulWidget {
 
 class _SignUpState extends State<SignUp> {
   bool hiddenpass = true;
+
   TextEditingController emailController = TextEditingController();
   TextEditingController nameController = TextEditingController();
   TextEditingController passController = TextEditingController();
@@ -169,7 +171,11 @@ class _SignUpState extends State<SignUp> {
   }
 
   void showSuccessDialog(BuildContext context) {
-    showDialog(
+    showModal(
+      configuration: FadeScaleTransitionConfiguration(
+        transitionDuration: Duration(seconds: 1),
+        reverseTransitionDuration: Duration(seconds: 1),
+      ),
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
@@ -187,11 +193,23 @@ class _SignUpState extends State<SignUp> {
           actions: [
             TextButton(
               onPressed: () {
-                // Navigate to MyProductPage and close the dialog
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => MyProductCard()),
-                );
+                Navigator.of(context).pop();
+                Future.delayed(Duration(milliseconds: 500), () {
+                  Navigator.of(context).pushReplacement(
+                    PageRouteBuilder(
+                      transitionDuration: Duration(seconds: 2),
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          MyProductCard(),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                        return FadeTransition(
+                          opacity: animation,
+                          child: child,
+                        );
+                      },
+                    ),
+                  );
+                });
               },
               child: const Text(
                 "Close",
