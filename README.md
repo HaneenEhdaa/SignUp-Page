@@ -31,5 +31,13 @@ Title: Create signup page to access the shopping screen
   - **Hot Offers**: Displays a horizontal list of special offers.
 - Each product has an **Add to Cart** button that shows a snack bar message: "Your item added to the cart✨".
 
+
+### 3. **Smooth Page Transition**
+
+- When the user clicks Close in the success dialog:
+  - The dialog fades out smoothly.
+  - The Shopping Screen fades in with a smooth transition.
+  - This enhances the user experience by providing a visually appealing transition instead of an abrupt page switch.
+    
 ## Demo
-https://github.com/user-attachments/assets/5e1d1ead-7c41-4824-84ae-3f907818710e
+https://github.com/user-attachments/assets/976b4d04-5d22-4655-b944-f15c1223b7dd
