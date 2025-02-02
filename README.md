@@ -32,7 +32,7 @@ Title: Create signup page to access the shopping screen
 - Each product has an **Add to Cart** button that shows a snack bar message: "Your item added to the cart✨".
 
 
-### 3. **Smooth Page Transition**
+### 3. **Animate between the signup page and shopping page**
 
 - When the user clicks Close in the success dialog:
   - The dialog fades out smoothly.
