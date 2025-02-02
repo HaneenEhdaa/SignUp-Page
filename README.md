@@ -30,3 +30,6 @@ Title: Create signup page to access the shopping screen
   - **Product Grid**: Displays a grid of products.
   - **Hot Offers**: Displays a horizontal list of special offers.
 - Each product has an **Add to Cart** button that shows a snack bar message: "Your item added to the cart✨".
+
+## Demo
+https://github.com/user-attachments/assets/5e1d1ead-7c41-4824-84ae-3f907818710e
